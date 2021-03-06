@@ -5,7 +5,7 @@ export default function fetchSmaple() {
   let res = '';
   let users = '';
   let body = document.body;
-  let btn = document.querySelector('button');
+  let btn = document.querySelector('#js-more-btn');
   let showLen = 10;
   let jsonHtml = document.querySelector('#json ul');
   let loading = document.querySelector('#loading');
