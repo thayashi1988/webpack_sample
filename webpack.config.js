@@ -3,7 +3,7 @@ const outputPath = path.resolve(__dirname, 'dist');
 const webpack = require('webpack');
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/js/index.js',
   output: {
     path: outputPath + '/js',
     publicPath: '/js', // ホットリロードさせるためにbundle.jsの位置を指定
@@ -12,8 +12,8 @@ module.exports = {
   devServer: {
     contentBase: outputPath,
     open: true,
-    // inline: true,
     hot: true,
+    // inline: true,
     // watchContentBase: true,
     // port: 8080,
   },

@@ -15,8 +15,9 @@ export default function fetchSmaple() {
       //fetchをするとpromiseオブジェクトが返ってくる
       //async、awaitでfetchするとresponseオブジェクトが返ってくる
       res = await fetch('https://jsonplaceholder.typicode.com/posts');
-      console.log('res:', res);
+      console.log('fetch.js_res:', res);
       users = await res.json();
+      // console.log('fetch.js_users:', users);
 
       // for(let num = 0; num < users.length; num++) {
       for (let num = 0; num < showLen; num++) {
@@ -38,19 +39,12 @@ export default function fetchSmaple() {
 
   window.addEventListener('DOMContentLoaded', function () {
     callApiFetch();
-    // .then((users) => {
-    //   console.log('users:', users);
-    // })
-    // .catch((error) => {
-    //   console.log('失敗しました');
-    // });
 
     let count = 0;
     btn.addEventListener('click', function () {
       count++;
       showLen = 10 * count;
       for (let i = showLen; i < showLen + 10; i++) {
-        console.log('i:', i);
         if (users.length <= i) {
           let heading2 = document.createElement('h2');
           heading2.innerHTML = 'データはありません';
@@ -65,7 +59,6 @@ export default function fetchSmaple() {
         let text = users[i].title;
         div.innerHTML = text;
         jsonHtml.appendChild(div);
-        console.log('btn:', btn.getBoundingClientRect());
         scrollTo(btn.getBoundingClientRect());
       }
     });

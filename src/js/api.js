@@ -6,7 +6,7 @@ export default function api() {
   async function callApi() {
     try {
       let test = await fetch('https://jsonplaceholder.typicode.com/posts');
-      console.log('test:', test);
+      console.log('api.js:', test);
       res = await test.json();
       return res;
     } catch (err) {
