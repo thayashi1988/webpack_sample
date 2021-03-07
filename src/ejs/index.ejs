@@ -11,13 +11,13 @@
     />
   </head>
   <body>
-    <header class="flex items-center justify-center bg-blue-400 h-10 mb-5">
-      <p class="text-center"><a href="./top.html">ヘッダー</a></p>
-    </header>
+    <%- require ('./include/_header.ejs')()%>
     <div class="container mx-auto px-4">
       <h1 class="text-3xl font-bold mb-5">
         jsonデータ100件をボタンをクリックするごとに、10件ずつ表示
       </h1>
+      <h2>おおおおおおおおおおおおおおおおおおおお</h2>
+      <h3>いいいいいいいいいいいいいいい</h3>
       <div id="json">
         <div
           id="loading"
@@ -46,9 +46,7 @@
       <li>2</li>
       <li>3</li>
     </ul>
-    <footer class="flex items-center justify-center bg-black h-10">
-      <p class="text-center text-white">フッター</p>
-    </footer>
+    <%- require ('./include/_footer.ejs')()%>
     <script src="./js/bundle.js"></script>
   </body>
 </html>

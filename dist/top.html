@@ -9,15 +9,19 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-  </head>
+  <script defer src="/js/bundle.js"></script></head>
   <body>
-    <header class="flex items-center justify-center bg-blue-400 h-10 mb-5">
-      <p class="text-center"><a href="./top.html">ヘッダー</a></p>
-    </header>
+    <header class="flex items-center justify-between bg-blue-400 pt-5 pb-5 mb-5">
+  <h1 class="text-4xl text-white"><a href="/">webpackのテスト</a></h1>
+  <p class="text-center">ヘッダー</p>
+</header>
+
     <div class="container mx-auto px-4">
       <h1 class="text-3xl font-bold mb-5">
         jsonデータ100件をボタンをクリックするごとに、10件ずつ表示
       </h1>
+      <h2>おおおおおおおおおおおおおおおおおおおお</h2>
+      <h3>いいいいいいいいいいいいいいい</h3>
       <div id="json">
         <div
           id="loading"
@@ -47,8 +51,8 @@
       <li>3</li>
     </ul>
     <footer class="flex items-center justify-center bg-black h-10">
-      <p class="text-center text-white">フッター</p>
-    </footer>
+  <p class="text-center text-white">フッター</p>
+</footer>
     <script src="./js/bundle.js"></script>
   </body>
 </html>
