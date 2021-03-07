@@ -9,7 +9,7 @@ export default function fetchSmaple() {
   let showLen = 10;
   let jsonHtml = document.querySelector('#json ul');
   let loading = document.querySelector('#loading');
-
+  // console.log('loading:', loading);
   async function callApiFetch() {
     try {
       //fetchをするとpromiseオブジェクトが返ってくる
