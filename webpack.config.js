@@ -21,7 +21,7 @@ module.exports = [
   {
     mode: 'development',
     // devtool: 'source-map',
-    entry: './src/js/index.js',
+    entry: './src/assets/js/index.js',
     output: {
       path: outputPath + '/js',
       publicPath: '/js/', // ホットリロードさせるためにbundle.jsの位置を指定
@@ -108,7 +108,7 @@ module.exports = [
       // 画像吐き出し先
       new CopyPlugin({
         patterns: [
-          { from: 'src/img', to: '../img' },
+          { from: 'src/assets/img', to: '../img' },
           // { from: "./src/favicon.png", to: "favicon.png" },
           // { from: "./src/favicon.svg", to: "favicon.svg" },
         ],
