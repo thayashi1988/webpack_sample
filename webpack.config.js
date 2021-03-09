@@ -2,10 +2,12 @@
 const path = require('path');
 const outputPath = path.resolve(__dirname, 'dist');
 const webpack = require('webpack');
+console.log('outputPath:', outputPath);
 
 //plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
@@ -136,5 +138,10 @@ module.exports = [
       // リロードのためのプラグイン
       new webpack.HotModuleReplacementPlugin(),
     ],
+    optimization: {
+      minimizer: [
+        new OptimizeCSSAssetsPlugin(), // CSSのminifyを行う
+      ],
+    },
   },
 ];
