@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --watch",
-    "dev": "webpack --config webpack.config.js",
     "start": "webpack serve",
     "build": "webpack --mode production"
   },

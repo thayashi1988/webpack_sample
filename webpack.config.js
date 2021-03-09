@@ -23,8 +23,8 @@ module.exports = [
     // devtool: 'source-map',
     entry: './src/assets/js/index.js',
     output: {
-      path: outputPath + '/js',
-      publicPath: '/js/', // ホットリロードさせるためにbundle.jsの位置を指定
+      path: outputPath + '/assets/js',
+      publicPath: '/assets/js/', // ホットリロードさせるためにbundle.jsの位置を指定
       filename: 'bundle.js',
     },
     module: {
@@ -93,7 +93,7 @@ module.exports = [
 
       // ejsをhtmlファイルへ生成
       new HtmlWebpackPlugin({
-        filename: '../index.html', // bundle.jsからの相対位置
+        filename: '../../index.html', // bundle.jsからの相対位置
         template: 'src/ejs/index.ejs',
         inject: false, // scriptタグの自動生成を外す
         minify: false, //minifyしない
