@@ -1,3 +1,8 @@
+/*
+/////////////////////////
+styles
+/////////////////////////
+*/
 .heading1 {
   // @include font-size(30);
   // text-align: center;
@@ -5,5 +10,19 @@
   display: flex;
   display: grid;
   // grid-template: 'header header';
-  transform: rotate(45deg);
+  // transform: rotate(45deg);
+  // background-image: linear-gradient(to bottom, #8bcc8e 0%, #a7f5ab 100%);
+  // border-radius: 10px;
+  animation: test 0.4s ease;
+}
+@keyframes test {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
 }
