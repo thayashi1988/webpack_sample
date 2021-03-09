@@ -65,6 +65,6 @@ export default function fetchSmaple() {
   });
 
   window.addEventListener('click', () => {
-    // console.log('xxxxxxxxxxxxxxxxxxxxxxxx');
+    console.log('xxxxxxxxxxxxxxxxxxxxxxxx');
   });
 }
