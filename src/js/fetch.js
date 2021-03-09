@@ -63,4 +63,8 @@ export default function fetchSmaple() {
       }
     });
   });
+
+  window.addEventListener('click', () => {
+    // console.log('xxxxxxxxxxxxxxxxxxxxxxxx');
+  });
 }

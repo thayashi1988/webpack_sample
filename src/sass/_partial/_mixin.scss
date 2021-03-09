@@ -1,0 +1,67 @@
+////////////////
+//  mixin
+////////////////
+//ex
+//@include mediaQuery(max,0,768){//SP時
+//   @include font-size(28);
+//   margin-bottom: (30 / 768) * 100vw;
+//}
+// @include mediaQuery(min,0,768){//PC時
+//   @include font-size(48);
+//   margin-bottom: 40px;
+// }
+//mediaQuery
+@mixin mediaQuery($val, $min, $max) {
+  @if $val == max {
+    @media screen and (max-width: $max + px) {
+      @content;
+    }
+  } @else if $val == min {
+    @media screen and (min-width: $max + px) {
+      @content;
+    }
+  } @else if $val == both {
+    @media screen and (min-width: $max + px) and (max-width: $max + px) {
+      @content;
+    }
+  }
+}
+
+//ex
+// @include font-size(28);
+//font-size
+@mixin font-size($size, $base: 10) {
+  font: {
+    size: $size + px;
+    size: ($size / $base) * 1rem;
+  }
+}
+
+//ex
+// @include absolute(0,0,0,0);
+// @include absolute($top:0, $bottom:0);
+//position
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    right: $right;
+  }
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+  @if $left != null {
+    left: $left;
+  }
+}
+
+// //ex
+// // @include transition();
+// // @include transition(1s,.5s);
+// // @include transition(1s,.5s,linear);
+// //transition
+@mixin transition($speed: 0.4s, $delay: 0s, $easeing: ease) {
+  transition: all $speed $delay $easeing;
+}

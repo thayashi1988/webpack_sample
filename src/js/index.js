@@ -1,4 +1,6 @@
 import 'regenerator-runtime/runtime';
+// import '../css/style.css';
+import '../sass/common.scss';
 
 import bar from './bar';
 import api from './api';
