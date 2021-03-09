@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-    <link type="text/css" href="./css/common.css" rel="stylesheet" />
-  </head>
+  <%- require ('./include/_head.ejs')()%>
   <body>
     <%- require ('./include/_header.ejs')()%>
+
     <div class="container mx-auto px-4">
       <h1 class="text-3xl font-bold mb-5 heading1">
         jsonデータ100件をボタンをクリックするごとに、10件ずつ表示
@@ -42,7 +38,8 @@
       <li>2</li>
       <li>3</li>
     </ul>
+
     <%- require ('./include/_footer.ejs')()%>
-    <script src="./js/bundle.js"></script>
+    <script src="./assets/js/bundle.js"></script>
   </body>
 </html>
