@@ -156,6 +156,7 @@ module.exports = [
       ],
     },
     // target: ['web', 'es5'],
+    target: 'web', // webだけにしないとリロードが起動しない
     devServer: {
       contentBase: path.resolve(__dirname, 'dist/'),
       publicPath: './dist',
