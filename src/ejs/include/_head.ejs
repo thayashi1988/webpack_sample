@@ -2,9 +2,10 @@
   RESOURCE = './assets/';
   TITLE = 'ガッチ株式会社';
   DESCRIPTION = 'ガッチ株式会社のページです。';
-  KEYWORDS = ''
-  PAGEURL = 'dummy';
+  KEYWORDS = 'aaa,bbb,ccc,ddd'
+  PAGEURL = 'https://www.dummy.co.jp';
   OG_IMG = 'https://ogp.jpg';
+  OG_TWWITTER_IMG = 'https://ogp.jpg';
 %>
 <head>
 <meta charset="UTF-8">
@@ -14,7 +15,7 @@
 <meta name="description" content="<%= DESCRIPTION %>">
 <meta name="keywords" content="<%= KEYWORDS %>">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="">
+<meta name="twitter:site" content="<%= OG_TWWITTER_IMG %>">
 <meta property="og:site_name" content="<%= TITLE %>">
 <meta property="og:title" content="<%= TITLE %>">
 <meta property="og:description" content="<%= DESCRIPTION %>">
