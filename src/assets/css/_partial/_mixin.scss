@@ -37,6 +37,47 @@
   }
 }
 
+// //ex
+// // @include sizeVw(mt, 60);  margin-top
+// // @include sizeVw(fs, 60);  font-size
+// // sizeVW
+@mixin sizeVw($property, $size) {
+  $winW: $sp_width; // デザインカンプの幅を設定
+  @if $property == 'fs' {
+    font-size: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'mt' {
+    margin-top: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'mr' {
+    margin-right: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'mb' {
+    margin-bottom: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'ml' {
+    margin-left: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'pt' {
+    margin-top: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'pr' {
+    margin-right: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'pb' {
+    margin-bottom: calc((#{$size} / #{$winW}) * 100vw);
+  }
+  @if $property == 'pl' {
+    margin-left: calc((#{$size} / #{$winW}) * 100vw);
+  }
+}
+
+//ex
+// @include border(top,1,solid,#ccc);  //border-top:1px solid #ccc;
+@mixin border($pos, $width, $type, $color) {
+  border-#{$pos}: #{$width}px $type $color;
+}
+
 //ex
 // @include absolute(0,0,0,0);
 // @include absolute($top:0, $bottom:0);
