@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "plugins": [],
+  "parserOptions": {
+    "ecmaVersion": 5
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "globals": {},
+  "rules": {
+    "global-require": 0,
+    "import/no-unresolved": 0,
+    "no-param-reassign": 0
+  }
+}
