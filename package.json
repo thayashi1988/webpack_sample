@@ -9,7 +9,7 @@
     "build": "webpack --mode production",
     "start:prod": "webpack serve && webpack --mode production",
     "lint": "eslint ./src/assets/js/",
-    "fix": "eslint ./src/assets/js/ --fix"
+    "lint:fix": "eslint ./src/assets/js/ --fix"
   },
   "author": "",
   "license": "ISC",

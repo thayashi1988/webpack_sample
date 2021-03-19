@@ -4,17 +4,34 @@
   ],
   "plugins": [],
   "parserOptions": {
-    "ecmaVersion": 5
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+    // "ecmaVersion": 6,
   },
   "env": {
     "browser": true,
-    "es6": true,
+    // "es6": true,
+    "es2021": true,
     "jquery": true
   },
   "globals": {},
   "rules": {
     "global-require": 0,
     "import/no-unresolved": 0,
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "info",
+          "error"
+        ]
+      }
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ]
   }
 }
