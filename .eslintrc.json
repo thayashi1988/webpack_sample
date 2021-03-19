@@ -1,8 +1,9 @@
 {
   "extends": [
     "eslint:recommended"
+    // "plugin:prettier/recommended"
   ],
-  "plugins": [],
+  "plugins": ["prettier"],
   "parserOptions": {
     // "ecmaVersion": 6,
     "ecmaVersion": 2021,
