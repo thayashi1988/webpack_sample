@@ -9,7 +9,7 @@
 
 ## 起動方法
 
-ファイルのコンパイル、バンドル
+ファイルのコンパイル
 
 ```
 npm run webpack
@@ -21,7 +21,27 @@ npm run webpack
 npm start
 ```
 
-ファイルを圧縮
+## 納品前チェック
+
+JS ファイルの構文チェック
+
+```
+npm run lint
+```
+
+JS ファイルの成形
+
+```
+npm run lint:fix
+```
+
+HTML ファイルの成形
+
+```
+npm run lint:html
+```
+
+プロジェクトのビルド
 
 ```
 npm run build
@@ -29,7 +49,5 @@ npm run build
 
 ## 注意点
 
-ejs から HTML を生成した際にインデントなどが崩れるため、生成 HTML を command+s で保存をかけることで整形する。
-settings.json の、
-"editor.formatOnSave": false,
-を true にして html ファイルを開き保存すること。
+- JS ファイルの成形`npm run lint:fix`をしてから、HTML ファイルの成形`npm run lint:html`を実行してください。
+  逆で実行すると、HTML ファイルの成形が戻ってしまいます。

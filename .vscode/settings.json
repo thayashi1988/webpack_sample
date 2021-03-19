@@ -3,22 +3,25 @@
   "less.validate": false,
   "scss.validate": false,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     // "editor.formatOnSave": false,
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+    }
   },
   // "html.format.contentUnformatted": "pre,code,textarea,span,br",
   // "html.format.extraLiners": "",
   // "html.format.unformatted": "span",
   // "html.format.wrapLineLength": 0,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true,
-    "source.fixAll.eslint": true
-  },
   // "prettier.printWidth": 160,
   // "prettier.singleQuote": false,
 }
