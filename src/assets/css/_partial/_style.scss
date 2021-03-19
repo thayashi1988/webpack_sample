@@ -48,7 +48,7 @@ styles
     @include mediaQuery(max, 0, 768) {
       margin: -20px -10px 0;
     }
-    &[data-valign='center'] {
+    &[data-valign="center"] {
       justify-content: center;
       align-items: center;
     }
@@ -57,12 +57,12 @@ styles
     padding: 0 30px;
     margin-top: 40px;
     @for $value from 1 through 12 {
-      &[data-col='#{$value}'] {
+      &[data-col="#{$value}"] {
         width: (100% / 12 * $value);
       }
     }
     @for $value from 1 through 12 {
-      &[data-col-sp='#{$value}'] {
+      &[data-col-sp="#{$value}"] {
         @include mediaQuery(max, 0, 768) {
           width: (100% / 12 * $value);
         }
@@ -91,9 +91,9 @@ styles
   grid-template-columns: 200px 1fr;
   grid-template-rows: 50px 1fr 50px;
   grid-template:
-    'header header'
-    'aside  main'
-    'footer footer';
+    "header header"
+    "aside  main"
+    "footer footer";
   // area→row/column
   // grid-template:
   //   "header header" 50px
@@ -104,10 +104,10 @@ styles
   // align-items: center;
   @include mediaQuery(max, 0, 768) {
     grid-template:
-      'header header'
-      'aside  aside'
-      'main main'
-      'footer footer';
+      "header header"
+      "aside  aside"
+      "main main"
+      "footer footer";
   }
   & > *:first-child {
     grid-area: header;

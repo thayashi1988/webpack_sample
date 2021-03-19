@@ -26,3 +26,10 @@ npm start
 ```
 npm run build
 ```
+
+## 注意点
+
+ejs から HTML を生成した際にインデントなどが崩れるため、生成 HTML を command+s で保存をかけることで整形する。
+settings.json の、
+"editor.formatOnSave": false,
+を true にして html ファイルを開き保存すること。
