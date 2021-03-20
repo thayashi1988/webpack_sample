@@ -7,13 +7,13 @@ export default function jquery(arg) {
       return false;
     });
     const list = $('li');
-    console.log('list:', list);
+    // console.log('list:', list);
 
     let arrays = [];
     let arrrayss = [];
     arrrayss.push(list);
     arrays = [...list];
-    console.log('arrrayss:', arrrayss);
+    // console.log('arrrayss:', arrrayss);
     console.log('arrays:', arrays);
   });
 }

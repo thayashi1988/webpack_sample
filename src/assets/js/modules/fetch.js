@@ -12,7 +12,7 @@ export default function fetchSmaple() {
       //fetchをするとpromiseオブジェクトが返ってくる
       //async、awaitでfetchするとresponseオブジェクトが返ってくる
       res = await fetch('https://jsonplaceholder.typicode.com/posts');
-      console.log('fetch.js_res:', res);
+      // console.log('fetch.js_res:', res);
       users = await res.json();
       // console.log('fetch.js_users:', users);
 
