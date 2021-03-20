@@ -1,6 +1,4 @@
-import Swiper from 'swiper/bundle';
-
-export default function swiper() {
+export default function swiper(arg) {
   const option = {
     loop: true,
     // autoplay: true,
@@ -15,5 +13,6 @@ export default function swiper() {
       clickable: true, //クリックに反応させる
     },
   };
-  const swiper = new Swiper('.swiper-container', option);
+  // const swiper = new arg(".swiper-container", option);
+  new arg('.swiper-container', option);
 }

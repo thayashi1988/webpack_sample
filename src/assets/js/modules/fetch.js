@@ -1,6 +1,3 @@
-import 'core-js';
-import 'regenerator-runtime/runtime';
-
 export default function fetchSmaple() {
   let res = '';
   let users = '';

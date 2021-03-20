@@ -1,6 +1,3 @@
-import 'core-js';
-import 'regenerator-runtime/runtime';
-
 export default function api() {
   let res = '';
   async function callApi() {
