@@ -37,6 +37,9 @@ module.exports = [
       publicPath: '/assets/js/', // ホットリロードさせるためにbundle.jsの位置を指定
       filename: '[name].bundle.js',
     },
+    stats: {
+      children: true,
+    },
     module: {
       rules: [
         {
@@ -48,8 +51,8 @@ module.exports = [
           // 拡張子 .js の場合
           // test: /\.js$/,
           test: /\.js$/,
-          exclude: /node_modules/,
-          // exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
+          // exclude: /node_modules/,
+          exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
           // loader: "babel-loader",
           use: {
             loader: 'babel-loader',
