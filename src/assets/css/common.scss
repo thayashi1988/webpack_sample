@@ -2,6 +2,10 @@
 @import "_partial/_mixin";
 @import "_partial/_variables";
 @import "_partial/_base";
-// @import "../../../node_modules/swiper/swiper/swiper-bundle.min.css";
+// swiperのcssをインポート
 @import "../../../node_modules/swiper/swiper";
+@import "../../../node_modules/swiper/components/navigation/navigation";
+@import "../../../node_modules/swiper/components/pagination/pagination";
+@import "../../../node_modules/swiper/components/scrollbar/scrollbar";
+// オリジナルスタイル
 @import "_partial/_style";
