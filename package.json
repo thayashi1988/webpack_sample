@@ -6,8 +6,9 @@
   "scripts": {
     "webpack": "webpack --watch",
     "start": "webpack serve",
-    "build": "webpack --mode=production",
-    "build:env": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack --mode=development --watch",
+    "build": "NODE_ENV=production webpack --mode=production",
+    "build:env": "webpack --mode=production",
     "lint": "eslint ./src/assets/js/",
     "lint:fix": "eslint --fix ./src/assets/js/",
     "lint:html": "npx prettier ./dist/index.html --write"
