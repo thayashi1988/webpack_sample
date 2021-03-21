@@ -1,3 +1,4 @@
+// pugins
 // import '../css/style.css';
 // import '../css/common.scss';
 // import 'swiper/swiper-bundle.css';
@@ -5,6 +6,7 @@
 import Swiper from 'swiper/bundle';
 import jQuery from 'jquery';
 
+// modules
 // import bar from './modules/bar';
 // import api from './modules/api';
 // import question from './modules/question';

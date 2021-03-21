@@ -1,19 +1,32 @@
 export default function jquery(arg) {
   window.addEventListener('load', () => {
     const $ = arg;
-    const test = $('#js-more-btn');
-    test.on('click', () => {
+    const btnMore = $('#js-more-btn');
+    btnMore.on('click', () => {
       alert('aaaaaaaaaaaaaaa');
       return false;
     });
+
+    btnMore
+      .on('mouseenter', () => {
+        console.log(`ボタンにホバーした`);
+      })
+      .mouseleave(function () {
+        console.log(`ボタンからマウスを離した`);
+      });
+
+    $(document).on('contextmenu', function (e) {
+      // e.preventDefault();
+      alert('右クリックを押した');
+      return false;
+    });
+
     const list = $('li');
     // console.log('list:', list);
-
     let arrays = [];
     let arrrayss = [];
     arrrayss.push(list);
     arrays = [...list];
-    // console.log('arrrayss:', arrrayss);
     console.log('arrays:', arrays);
   });
 }
