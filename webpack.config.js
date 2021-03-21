@@ -6,6 +6,7 @@ const outputPath = path.resolve(__dirname, 'dist');
 const webpack = require('webpack');
 const env = process.env.NODE_ENV;
 console.log(env === 'production');
+console.log(env === 'development' ? 'eval-source-map' : false,);
 
 //plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -15,19 +16,19 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const TerserPlugin = require('terser-webpack-plugin');
 
 // paths
-const paths = {
-  dist: './dist/',
-  src: './src/',
-};
+// const paths = {
+//   dist: './dist/',
+//   src: './src/',
+// };
 
 module.exports = [
   {
     mode: 'development',
-    // devtool: 'source-map',
+    devtool: env === 'development' ? 'eval-source-map' : false,
     entry: {
       index: './src/assets/js/index.js'
       // index2: './src/assets/js/index.js'
@@ -164,7 +165,7 @@ module.exports = [
     ],
     optimization: {
       minimizer: [
-        //env === 'production' ? new OptimizeCSSAssetsPlugin(),// CSSのminifyを行う
+        // (env === 'development' ? '' : new OptimizeCSSAssetsPlugin()),// CSSのminifyを行う
         new OptimizeCSSAssetsPlugin(),// CSSのminifyを行う
         new TerserPlugin({
           terserOptions: {
