@@ -5,7 +5,7 @@ const path = require('path');
 const outputPath = path.resolve(__dirname, 'dist');
 const webpack = require('webpack');
 const env = process.env.NODE_ENV;
-console.log(env === 'development' ? 'eval-source-map' : false,);
+console.log(path.resolve('path.resolve:::::',__dirname, 'src/assets/css'));
 
 //plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -49,6 +49,7 @@ module.exports = [
           // test: /\.js$/,
           test: /\.js$/,
           exclude: /node_modules/,
+          // exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
           // loader: "babel-loader",
           use: {
             loader: 'babel-loader',
@@ -195,5 +196,12 @@ module.exports = [
         }
       }
     },
+    // resolve: {
+    //   alias: {// うまく動かない
+    //     '@css': path.resolve(__dirname, 'src/assets/css'),
+    //     '@img': path.resolve(__dirname, 'src/assets/img'),
+    //     '@js': path.resolve(__dirname, 'src/assets/js')
+    //   }
+    // }
   },
 ];
