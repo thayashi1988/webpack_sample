@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "webpack --watch",
     "start": "webpack serve",
-    "dev": "NODE_ENV=development webpack --mode=development --watch",
+    "dev": "NODE_ENV=development webpack --watch",
     "build": "NODE_ENV=production webpack --mode=production",
     "build:env": "webpack --mode=production",
     "lint": "eslint ./src/assets/js/",

@@ -5,7 +5,6 @@ const path = require('path');
 const outputPath = path.resolve(__dirname, 'dist');
 const webpack = require('webpack');
 const env = process.env.NODE_ENV;
-console.log(env === 'production');
 console.log(env === 'development' ? 'eval-source-map' : false,);
 
 //plugins
@@ -20,10 +19,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 // paths
-// const paths = {
-//   dist: './dist/',
-//   src: './src/',
-// };
+const paths = {
+  dist: path.resolve(__dirname, 'dist'),
+  src: './src/',
+};
 
 module.exports = [
   {
@@ -53,17 +52,17 @@ module.exports = [
           // loader: "babel-loader",
           use: {
             loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    useBuiltIns: 'usage',
-                    corejs: 3
-                  }
-                ]
-              ]
-            }
+            // options: {
+            //   presets: [
+            //     [
+            //       "@babel/preset-env",
+            //       {
+            //         useBuiltIns: 'usage',
+            //         corejs: 3
+            //       }
+            //     ]
+            //   ]
+            // }
           },
         },
         {
@@ -103,7 +102,7 @@ module.exports = [
       ],
     },
     devServer: {
-      contentBase: path.resolve(__dirname, 'dist/'),
+      contentBase: `${outputPath}/`,
       publicPath: './dist',
       watchContentBase: true,
       hot: true,
@@ -120,7 +119,8 @@ module.exports = [
       new HtmlWebpackPlugin({
         filename: '../../index.html', // bundle.jsからの相対位置
         template: 'src/ejs/index.ejs',
-        inject: false, // scriptタグの自動生成を外す
+        // inject: false, // scriptタグの自動生成を外す
+        inject: 'body', // scriptタグの自動生成をbodyタグ上に入れる
         minify: false, //minifyしない
         // alwaysWriteToDisk: true,
       }),
