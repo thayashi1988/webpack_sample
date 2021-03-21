@@ -119,8 +119,8 @@ module.exports = [
       new HtmlWebpackPlugin({
         filename: '../../index.html', // bundle.jsからの相対位置
         template: 'src/ejs/index.ejs',
-        // inject: false, // scriptタグの自動生成を外す
-        inject: 'body', // scriptタグの自動生成をbodyタグ上に入れる
+        inject: false, // scriptタグの自動生成を外す
+        // inject: 'body', // scriptタグの自動生成をbodyタグ上に入れる
         minify: false, //minifyしない
         // alwaysWriteToDisk: true,
       }),

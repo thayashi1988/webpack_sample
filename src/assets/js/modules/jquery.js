@@ -4,6 +4,7 @@ export default function jquery(arg) {
     const btnMore = $('#js-more-btn');
     btnMore.on('click', () => {
       alert('aaaaaaaaaaaaaaa');
+      alert('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
       return false;
     });
 

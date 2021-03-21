@@ -1,6 +1,6 @@
 // pugins
 // import '../css/style.css';
-// import '../css/common.scss';
+import '../css/common.scss';
 // import 'swiper/swiper-bundle.css';
 // import 'regenerator-runtime/runtime';
 import Swiper from 'swiper/bundle';
