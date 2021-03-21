@@ -105,6 +105,9 @@ module.exports = [
       contentBase: `${outputPath}/`,
       publicPath: './dist',
       watchContentBase: true,
+      watchOptions: {
+        ignore: /node_modules/
+      },
       hot: true,
       inline: true,
       open: true, //起動時にブラウザを開く
