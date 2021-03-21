@@ -5,15 +5,18 @@
 - webpack
 - ejs
 - sass
-- 画像圧縮
+- Imagemin
 
 ## 起動方法
 
-ファイルのコンパイル
+webpack 起動
 
 ```
-npm run webpack
+npm run dev
 ```
+
+- 環境変数を読み込み、dev ならソースマップを出力します。
+- JS ファイルのサイズ適正化のため、プラグインなどの vendor ファイル群と 自作する module ファイル群で js ファイルの出力を分けます。
 
 ローカルサーバー起動
 
@@ -23,19 +26,19 @@ npm start
 
 ## 納品前チェック
 
-JS ファイルの構文チェック
+JS Lint
 
 ```
 npm run lint
 ```
 
-JS ファイルの成形
+JS Lint の修正
 
 ```
 npm run lint:fix
 ```
 
-HTML ファイルの成形
+HTML の成形
 
 ```
 npm run lint:html
@@ -46,6 +49,8 @@ npm run lint:html
 ```
 npm run build
 ```
+
+- 環境変数を読み込み、build ならソースマップを出力しません。
 
 ## 注意点
 
