@@ -1,7 +1,9 @@
 // pugins
 // import '../css/style.css';
 import '../css/common.scss';
-import Swiper from 'swiper/bundle';
+// import Swiper from "swiper/bundle";
+import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper/core';
+SwiperCore.use([Navigation, Pagination, Scrollbar]);
 import jQuery from 'jquery';
 
 // modules
@@ -16,5 +18,6 @@ import jquery from './modules/jquery';
 // api();
 // question();
 fetchSmaple();
-swiper(Swiper);
+// swiper(Swiper);
+swiper(SwiperCore);
 jquery(jQuery);

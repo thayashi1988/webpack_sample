@@ -1,11 +1,11 @@
 /* eslint-disable quotes */
 /* eslint-disable no-console */
+
 // settings
 const path = require('path');
-const outputPath = path.resolve(__dirname, 'dist');
 const webpack = require('webpack');
+const outputPath = path.resolve(__dirname, 'dist');
 const env = process.env.NODE_ENV;
-console.log(path.resolve('path.resolve:::::',__dirname, 'src/assets/css'));
 
 //plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -14,9 +14,11 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+//バンドル解析
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // paths
 const paths = {
@@ -168,11 +170,14 @@ module.exports = [
       // リロードのためのプラグイン
       new webpack.HotModuleReplacementPlugin(),
       // バンドルファイルのサイズを可視化。ブラウザを開く
-      // new BundleAnalyzerPlugin()
+      // new BundleAnalyzerPlugin({
+        // analyzerMode: 'static'
+        // analyzerHost: '127.0.0.2',
+        // analyzerPort: 8888
+      // }),
     ],
     optimization: {
       minimizer: [
-        // (env === 'development' ? '' : new OptimizeCSSAssetsPlugin()),// CSSのminifyを行う
         new OptimizeCSSAssetsPlugin(),// CSSのminifyを行う
         new TerserPlugin({
           terserOptions: {
@@ -200,7 +205,7 @@ module.exports = [
       }
     },
     // resolve: {
-    //   alias: {// うまく動かない
+    //   alias: {// パスの環境変数だがうまく動かない
     //     '@css': path.resolve(__dirname, 'src/assets/css'),
     //     '@img': path.resolve(__dirname, 'src/assets/img'),
     //     '@js': path.resolve(__dirname, 'src/assets/js')
