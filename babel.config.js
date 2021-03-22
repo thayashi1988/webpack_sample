@@ -5,6 +5,7 @@ module.exports = (api) => {
       [
         '@babel/preset-env',
         {
+          // modules: false,
           targets: [
             'last 2 versions',
             'ie 9',
