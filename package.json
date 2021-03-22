@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --watch",
-    "start": "webpack serve",
-    "dev": "NODE_ENV=development webpack --watch",
-    "build": "NODE_ENV=production webpack --mode=production",
-    "build:env": "webpack --mode=production",
+    "start": "NODE_ENV=development webpack serve",
+    "dev": "npm run dev:develop",
+    "dev:develop": "NODE_ENV=development webpack --watch",
+    "build": "npm run build:prod",
+    "build:prod": "NODE_ENV=production webpack --mode=production",
     "lint": "eslint ./src/assets/js/",
     "lint:fix": "eslint --fix ./src/assets/js/",
     "lint:html": "npx prettier ./dist/index.html --write"
