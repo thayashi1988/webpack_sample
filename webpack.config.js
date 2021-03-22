@@ -18,13 +18,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 //バンドル解析
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // paths
-const paths = {
-  dist: path.resolve(__dirname, 'dist'),
-  src: './src/',
-};
+// const paths = {
+//   dist: path.resolve(__dirname, 'dist'),
+//   src: './src/',
+// };
 
 module.exports = [
   {
@@ -52,16 +52,16 @@ module.exports = [
         {
           // 拡張子 .js の場合
           // test: /\.js$/,
-          test: /\.js$/,
+          test: /\.[jt]sx?$/,
           // exclude: /node_modules/,
           exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
-          // loader: "babel-loader",
+          // loader: 'babel-loader',
           use: {
             loader: 'babel-loader',
             // options: {
             //   presets: [
             //     [
-            //       "@babel/preset-env",
+            //       '@babel/preset-env',
             //       {
             //         useBuiltIns: 'usage',
             //         corejs: 3
@@ -71,6 +71,11 @@ module.exports = [
             // }
           },
         },
+        // {
+        //   test: /\.ts$/,
+        //   use: 'ts-loader',
+        //   exclude: /node_modules/,
+        // },
         {
           test: /\.css$/,
           use: [
@@ -98,6 +103,7 @@ module.exports = [
             {
               loader: 'sass-loader',
               options: {
+                // sourceMap: env === 'development' ? true : false,
                 sassOptions: {
                   outputStyle: 'expanded',
                 },
@@ -204,12 +210,13 @@ module.exports = [
         }
       }
     },
-    // resolve: {
+    resolve: {
+      // extensions: ['.ts', '.tsx', '.js', '.json']
     //   alias: {// パスの環境変数だがうまく動かない
     //     '@css': path.resolve(__dirname, 'src/assets/css'),
     //     '@img': path.resolve(__dirname, 'src/assets/img'),
     //     '@js': path.resolve(__dirname, 'src/assets/js')
     //   }
-    // }
+    }
   },
 ];

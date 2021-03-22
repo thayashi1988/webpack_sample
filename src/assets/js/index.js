@@ -13,6 +13,7 @@ import jQuery from 'jquery';
 import fetchSmaple from './modules/fetch';
 import swiper from './modules/swiper';
 import jquery from './modules/jquery';
+import typeScriptTest from './modules/test.ts';
 
 // bar();
 // api();
@@ -21,3 +22,4 @@ fetchSmaple();
 // swiper(Swiper);
 swiper(SwiperCore);
 jquery(jQuery);
+typeScriptTest();
