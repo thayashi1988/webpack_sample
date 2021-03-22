@@ -3,7 +3,9 @@ export default function typeScriptTest() {
 		console.log(message);
 	}
 	log('this is typeScript Hellow!!!!!');
-	log(12345678);
+	// log(12345678);
+	// const test = 'aaaaaaaaaaa'
+	// console.log('test:', test);
 
 	// const foo = document.querySelector('.container');
 	// if (foo) {
