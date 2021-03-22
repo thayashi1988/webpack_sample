@@ -17,7 +17,7 @@ export default function jquery(arg) {
       });
 
     $(document).on('contextmenu', function (e) {
-      // e.preventDefault();
+      e.preventDefault();
       alert('右クリックを押した');
       return false;
     });
