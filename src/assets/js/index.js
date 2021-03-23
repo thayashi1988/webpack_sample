@@ -17,7 +17,7 @@ import jQuery from 'jquery';
 import fetchSmaple from './modules/fetch';
 import swiper from './modules/swiper';
 import jquery from './modules/jquery';
-import typeScriptTest from './modules/test.ts';
+import typeScriptTest from './modules/test';
 
 ////////////////////////////////
 //fire
