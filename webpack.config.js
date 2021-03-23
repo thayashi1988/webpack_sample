@@ -211,7 +211,7 @@ module.exports = [
       }
     },
     resolve: {
-      // extensions: ['.ts', '.tsx', '.js', '.json']
+      extensions: ['.ts', '.tsx', '.js', '.json','.d.ts']
     //   alias: {// パスの環境変数だがうまく動かない
     //     '@css': path.resolve(__dirname, 'src/assets/css'),
     //     '@img': path.resolve(__dirname, 'src/assets/img'),
