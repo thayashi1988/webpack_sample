@@ -3,8 +3,8 @@
     // "outDir": "./dist/",
     // "jsx": "react",
     "noImplicitAny": false,
-    "module": "es6",
-    "target": "es5",
+    "module": "ES6",
+    "target": "ES5",
     "moduleResolution": "node",
     "allowJs": true,
     "strict": true,
@@ -17,5 +17,13 @@
     "esModuleInterop": true,
     "removeComments": true,
     "noImplicitReturns": true,
-  }
+    "types": []
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
