@@ -16,7 +16,7 @@ styles
   // border-radius: 10px;
   // transform: translateX(-50px);
   animation: test 0.4s ease;
-  background: url("../img/bg_main.png") no-repeat;
+  background: url('../img/bg_main.png') no-repeat;
   background-size: contain;
   margin-bottom: 50px;
   padding-top: calc((281 / 500) * 100%);
@@ -48,7 +48,7 @@ styles
     margin-top: 40px;
     margin-bottom: 40px;
     overflow: hidden;
-    @include mediaQuery(max, 0, 768) {
+    @include mq(max, 0, 768) {
       margin-bottom: 25px;
     }
   }
@@ -57,10 +57,10 @@ styles
     flex-wrap: wrap;
     margin: -40px -30px 0;
     // margin: 0 -10px 0;
-    @include mediaQuery(max, 0, 768) {
+    @include mq(max, 0, 768) {
       margin: -20px -10px 0;
     }
-    &[data-valign="center"] {
+    &[data-valign='center'] {
       justify-content: center;
       align-items: center;
     }
@@ -69,13 +69,13 @@ styles
     padding: 0 30px;
     margin-top: 40px;
     @for $value from 1 through 12 {
-      &[data-col="#{$value}"] {
+      &[data-col='#{$value}'] {
         width: (100% / 12 * $value);
       }
     }
     @for $value from 1 through 12 {
-      &[data-col-sp="#{$value}"] {
-        @include mediaQuery(max, 0, 768) {
+      &[data-col-sp='#{$value}'] {
+        @include mq(max, 0, 768) {
           width: (100% / 12 * $value);
         }
       }
@@ -86,7 +86,7 @@ styles
     & > :last-child {
       margin-bottom: 0;
     }
-    @include mediaQuery(max, 0, 768) {
+    @include mq(max, 0, 768) {
       margin-top: 20px;
     }
   }
@@ -103,9 +103,9 @@ styles
   grid-template-columns: 200px 1fr;
   grid-template-rows: 50px 1fr 50px;
   grid-template:
-    "header header"
-    "aside  main"
-    "footer footer";
+    'header header'
+    'aside  main'
+    'footer footer';
   // area→row/column
   // grid-template:
   //   "header header" 50px
@@ -114,12 +114,12 @@ styles
   //   200px 1fr;
   // display: flex;
   // align-items: center;
-  @include mediaQuery(max, 0, 768) {
+  @include mq(max, 0, 768) {
     grid-template:
-      "header header"
-      "aside  aside"
-      "main main"
-      "footer footer";
+      'header header'
+      'aside  aside'
+      'main main'
+      'footer footer';
   }
   & > *:first-child {
     grid-area: header;

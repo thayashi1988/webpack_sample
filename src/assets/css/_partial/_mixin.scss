@@ -2,16 +2,16 @@
 //  mixin
 ////////////////
 //ex
-//@include mediaQuery(max,0,768){//SP時
+//@include mq(max,0,768){//SP時
 //   @include font-size(28);
 //   margin-bottom: (30 / 768) * 100vw;
 //}
-// @include mediaQuery(min,0,768){//PC時
+// @include mq(min,0,768){//PC時
 //   @include font-size(48);
 //   margin-bottom: 40px;
 // }
-//mediaQuery
-@mixin mediaQuery($val, $min, $max) {
+//mq
+@mixin mq($val, $min, $max) {
   @if $val == max {
     @media screen and (max-width: $max + px) {
       @content;
@@ -31,10 +31,8 @@
 // @include font-size(28);
 //font-size
 @mixin font-size($size, $base: 10) {
-  font: {
-    size: $size + px;
-    size: ($size / $base) * 1rem;
-  }
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
 }
 
 // //ex
@@ -42,33 +40,42 @@
 // // @include sizeVw(fs, 60);  font-size
 // // sizeVW
 @mixin sizeVw($property, $size) {
-  $winW: $sp_width; // デザインカンプの幅を設定
+  $winW: $sp; // デザインカンプの幅を設定
   @if $property == 'fs' {
+    // font-size: ($size / $winW) * 100 + vw;
     font-size: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'mt' {
+    // margin-top: ($size / $winW) * 100 + vw;
     margin-top: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'mr' {
+    // margin-right: ($size / $winW) * 100 + vw;
     margin-right: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'mb' {
+    // margin-bottom: ($size / $winW) * 100 + vw;
     margin-bottom: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'ml' {
+    // margin-left: ($size / $winW) * 100 + vw;
     margin-left: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'pt' {
-    margin-top: calc((#{$size} / #{$winW}) * 100vw);
+    // margin-top: ($size / $winW) * 100 + vw;
+    padding-top: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'pr' {
-    margin-right: calc((#{$size} / #{$winW}) * 100vw);
+    // margin-right: ($size / $winW) * 100 + vw;
+    padding-right: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'pb' {
-    margin-bottom: calc((#{$size} / #{$winW}) * 100vw);
+    // margin-bottom: ($size / $winW) * 100 + vw;
+    padding-bottom: calc((#{$size} / #{$winW}) * 100vw);
   }
   @if $property == 'pl' {
-    margin-left: calc((#{$size} / #{$winW}) * 100vw);
+    // margin-left: ($size / $winW) * 100 + vw;
+    padding-left: calc((#{$size} / #{$winW}) * 100vw);
   }
 }
 
@@ -79,11 +86,16 @@
 }
 
 //ex
-// @include absolute(0,0,0,0);
-// @include absolute($top:0, $bottom:0);
+// @include absolute(0,0,0,0);  //top: 0; right:0; bottom:0 left: calc(50%);
+// @include absolute(0,null,null,calc(50%));  //top: 0; left: calc(50%);
+// @include absolute($top:0, $bottom:0);  //top: 0; bottom: 0;
+// @include absolute(0,0,0,0,cont);  //top: 0; right:0; bottom:0 left: calc(50%); content: "";
 //position
-@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null, $cont: null) {
   position: absolute;
+  @if $cont != null {
+    content: '';
+  }
   @if $top != null {
     top: $top;
   }
@@ -103,6 +115,16 @@
 // // @include transition(1s,.5s);
 // // @include transition(1s,.5s,linear);
 // //transition
-@mixin transition($speed: 0.4s, $delay: 0s, $easeing: ease) {
-  transition: all $speed $delay $easeing;
+@mixin transition($props: all, $speed: 0.4s, $delay: 0s, $easeing: ease) {
+  transition: $props $speed $delay $easeing;
+}
+
+// //ex
+// // @include flex();
+// flex
+@mixin flex($wrap: wrap, $items: center, $justify: center) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: $items;
+  justify-content: $justify;
 }

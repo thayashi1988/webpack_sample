@@ -36,12 +36,12 @@ a {
   word-break: break-all;
   @include transition();
   cursor: pointer;
-  @include mediaQuery(max, 0, $sp_width) {
+  @include mq(max, 0, $sp_width) {
     @include font-size(14);
   }
   &:hover {
     opacity: 0.7;
-    @include mediaQuery(max, 0, $sp_width) {
+    @include mq(max, 0, $sp_width) {
       opacity: 1;
     }
   }
@@ -57,7 +57,7 @@ p {
   @include font-size(16);
   letter-spacing: 0.6px;
   word-break: break-all;
-  @include mediaQuery(max, 0, $sp_width) {
+  @include mq(max, 0, $sp_width) {
     @include font-size(14);
   }
 }
