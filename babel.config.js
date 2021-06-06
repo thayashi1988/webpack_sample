@@ -12,6 +12,7 @@ module.exports = (api) => {
             'Android >= 4',
             'Firefox ESR'
           ],
+          // debug: true,
           useBuiltIns: 'usage',
           corejs: 3,
         },

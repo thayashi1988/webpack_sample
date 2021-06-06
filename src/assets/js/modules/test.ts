@@ -2,14 +2,8 @@ export default function typeScriptTest() {
 	const log = function (message: string) {
 		console.log(message);
 	}
-	log('this is typeScript Hellow!!!!!');
-	// log(12345678);
-	const test = 'aaaaaaaaaaa'
-	// console.log('test:', test);
-	console.log(`Hello ${test}`);
+	log('this is typeScript Hello!!!!!');
 
-	// const foo = document.querySelector('.container');
-	// if (foo) {
-	// 		foo.style.display = 'none';
-	// }
+	const h1: HTMLElement = <HTMLElement>document.querySelector('h1')
+	console.log('h1:', h1);
 }
