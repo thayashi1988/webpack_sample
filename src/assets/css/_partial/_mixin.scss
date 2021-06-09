@@ -21,7 +21,7 @@
       @content;
     }
   } @else if $val == both {
-    @media screen and (min-width: $max + px) and (max-width: $max + px) {
+    @media screen and (min-width: $min + px) and (max-width: $max + px) {
       @content;
     }
   }
