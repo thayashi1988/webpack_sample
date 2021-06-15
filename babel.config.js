@@ -8,8 +8,9 @@ module.exports = (api) => {
           // modules: false,
           targets: [
             'last 2 versions',
-            'ie 9',
-            'Android >= 4',
+            'ie >= 11',
+            'Android >= 6',
+            'iOS >= 11',
             'Firefox ESR'
           ],
           // debug: true,
