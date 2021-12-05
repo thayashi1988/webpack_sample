@@ -2,92 +2,19 @@
 <html lang="ja">
   <%- require ('./include/_head.ejs')()%>
   <body>
-    <h1>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</h1>
+    <h1>Webpackサンプル</h1>
     <%- require ('./include/_header.ejs')()%>
-    <div>
-      <picture>
-        <source media="(max-width: 768px)" srcset="/assets/img/access4.png">
-        <img src="/assets/img/bg_main.png" alt="画像">
-      </picture>
-    </div>
-    <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold mb-5 heading1">
-        jsonデータ100件をボタンをクリックするごとに、10件ずつ表示
-      </h1>
-      <h2>おおおおおおおおおおおおおおおおおおおお</h2>
-      <h3>いいいいいいいいいいいいいいい</h3>
-      <div id="json">
-        <div
-          id="loading"
-          class="border border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto mb-8"
-        >
-          <div class="animate-pulse flex space-x-4">
-            <p>読み込んでいます</p>
-            <div class="rounded-full bg-gray-400 h-12 w-12"></div>
-            <div class="flex-1 space-y-4 py-1">
-              <div class="h-4 bg-gray-400 rounded w-3/4"></div>
-              <div class="space-y-2">
-                <div class="h-4 bg-gray-400 rounded"></div>
-                <div class="h-4 bg-gray-400 rounded w-5/6"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ul class="mb-4"></ul>
-        <button id="js-more-btn" class="p-2 rounded-md bg-black text-white mb-5">もっと見る</button>
-      </div>
-    </div>
-    <!-- Slider main container -->
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
 
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <%- require ('./include/area/_picture.ejs')()%>
 
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
-    <h1>webpackのテスト</h1>
-    <h2>watch</h2>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-    <div class="l-column-container">
-      <div class="l-column-row">
-        <div class="l-column-col" data-col="4" data-col-sp="12" style="">
-          <p>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-          </p>
-        </div>
-        <div class="l-column-col" data-col="4" data-col-sp="12" style="">
-          <p>
-            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-          </p>
-        </div>
-        <div class="l-column-col" data-col="4" data-col-sp="12" style="">
-          <p>
-            ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="l-grid">
-      <div>ヘッダーヘッダーヘッダーヘッダーヘッダーヘッダーヘッダーヘッダーヘッダーヘッダー</div>
-      <div>えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度えー再度</div>
-      <div>メインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメインメイン</div>
-      <div>フッターフッターフッターフッターフッターフッターフッターフッターフッターフッターフッターフッターフッターフッターフッターフッター</div>
-    </div>
+    <%- require ('./include/area/_fetch.ejs')()%>
+
+    <%# require ('./include/area/_swiper.ejs')()%>
+
+    <%# require ('./include/area/_column.ejs')()%>
+
+    <%# require ('./include/area/_grid.ejs')()%>
+
     <%- require ('./include/_footer.ejs')()%>
     <script src="./assets/js/vendor.bundle.js"></script>
     <script src="./assets/js/index.bundle.js"></script>
