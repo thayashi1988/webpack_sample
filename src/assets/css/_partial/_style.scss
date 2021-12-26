@@ -98,14 +98,17 @@ styles
 /* autoprefixer grid: autoplace */
 .l-grid {
   display: grid;
-  row-gap: 10px;
-  column-gap: 20px;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 50px 1fr 50px;
   grid-template:
-    'header header'
-    'aside  main'
-    'footer footer';
+    'header header header'
+    '......  ...... ......'
+    'aside  ...... main'
+    '......  ...... ......'
+    'footer footer footer';
+  grid-template-columns: 200px 20px 1fr 20px;
+  grid-template-rows: 50px 10px 1fr 10px 50px;
+  // row-gap: 10px;
+  // column-gap: 20px;
+  // grid-gap: 10px 20px;
   // area→row/column
   // grid-template:
   //   "header header" 50px
@@ -117,20 +120,29 @@ styles
   @include mq(max, 0, 768) {
     grid-template:
       'header header'
+      '......  ......'
       'aside  aside'
+      '......  ......'
       'main main'
+      '......  ......'
       'footer footer';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 20px 1fr 20px 1fr 20px 50px;
   }
   & > *:first-child {
     grid-area: header;
+    background-color: #ccc;
   }
   & > *:nth-child(2) {
     grid-area: aside;
+    background-color: #ff0000;
   }
   & > *:nth-child(3) {
     grid-area: main;
+    background-color: #0b8111;
   }
   & > *:last-child {
     grid-area: footer;
+    background-color: #ccc;
   }
 }
