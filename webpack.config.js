@@ -86,7 +86,21 @@ module.exports = [
                 url: false,
               },
             },
-            'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    [
+                      'autoprefixer', {
+                        grid: 'autoplace',
+                      }
+                    ],
+                    // require('autoprefixer')({ grid: true })
+                  ],
+                },
+              },
+            },
           ],
         },
         {
@@ -99,7 +113,21 @@ module.exports = [
                 url: false,
               },
             },
-            'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    [
+                      'autoprefixer', {
+                        grid: 'autoplace',
+                      }
+                    ],
+                    // require('autoprefixer')({ grid: 'autoplace' })
+                  ],
+                },
+              },
+            },
             {
               loader: 'sass-loader',
               options: {
