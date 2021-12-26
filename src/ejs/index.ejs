@@ -2,19 +2,14 @@
 <html lang="ja">
   <%- require ('./include/_head.ejs')()%>
   <body>
-    <h1>Webpackサンプル</h1>
     <%- require ('./include/_header.ejs')()%>
-
-    <%- require ('./include/area/_picture.ejs')()%>
-
-    <%- require ('./include/area/_fetch.ejs')()%>
-
-    <%# require ('./include/area/_swiper.ejs')()%>
-
-    <%# require ('./include/area/_column.ejs')()%>
-
-    <%- require ('./include/area/_grid.ejs')()%>
-
+    <main>
+      <%- require ('./include/area/_picture.ejs')()%>
+      <%- require ('./include/area/_fetch.ejs')()%>
+      <%# require ('./include/area/_swiper.ejs')()%>
+      <%# require ('./include/area/_column.ejs')()%>
+      <%- require ('./include/area/_grid.ejs')()%>
+    </main>
     <%- require ('./include/_footer.ejs')()%>
     <script src="./assets/js/vendor.bundle.js"></script>
     <script src="./assets/js/index.bundle.js"></script>

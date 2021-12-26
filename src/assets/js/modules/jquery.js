@@ -4,7 +4,13 @@ export default function jquery(arg) {
     const btnMore = $('#js-more-btn');
     btnMore.on('click', () => {
       alert('aaaaaaaaaaaaaaa');
-      alert('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
+      const list = $('li');
+      // console.log('list:', list);
+      let arrays = [];
+      let arrrayss = [];
+      arrrayss.push(list);
+      arrays = [...list];
+      console.log('arrays:', arrays);
       return false;
     });
 
@@ -21,13 +27,5 @@ export default function jquery(arg) {
       alert('右クリックを押した');
       return false;
     });
-
-    const list = $('li');
-    // console.log('list:', list);
-    let arrays = [];
-    let arrrayss = [];
-    arrrayss.push(list);
-    arrays = [...list];
-    console.log('arrays:', arrays);
   });
 }

@@ -1,0 +1,11 @@
+/*
+/////////////////////////
+heading
+/////////////////////////
+*/
+.m-heading {
+  &-2 {
+    @include font-size(28);
+    font-weight: bold;
+  }
+}

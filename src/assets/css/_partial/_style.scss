@@ -16,10 +16,10 @@ styles
   // border-radius: 10px;
   // transform: translateX(-50px);
   animation: test 0.4s ease;
-  background: url('../img/bg_main.png') no-repeat;
-  background-size: contain;
+  // background: url('../img/bg_main.png') no-repeat;
+  // background-size: contain;
+  // padding-top: calc((281 / 500) * 100%);
   margin-bottom: 50px;
-  padding-top: calc((281 / 500) * 100%);
 }
 @keyframes test {
   0% {
@@ -37,112 +37,4 @@ styles
   width: 100%;
   height: 300px;
   background: #777;
-}
-
-/////////////////////////
-// column
-/////////////////////////
-.l-column {
-  &-container {
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    overflow: hidden;
-    @include mq(max, 0, 768) {
-      margin-bottom: 25px;
-    }
-  }
-  &-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -40px -30px 0;
-    // margin: 0 -10px 0;
-    @include mq(max, 0, 768) {
-      margin: -20px -10px 0;
-    }
-    &[data-valign='center'] {
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  &-col {
-    padding: 0 30px;
-    margin-top: 40px;
-    @for $value from 1 through 12 {
-      &[data-col='#{$value}'] {
-        width: (100% / 12 * $value);
-      }
-    }
-    @for $value from 1 through 12 {
-      &[data-col-sp='#{$value}'] {
-        @include mq(max, 0, 768) {
-          width: (100% / 12 * $value);
-        }
-      }
-    }
-    & > :first-child {
-      margin-top: 0;
-    }
-    & > :last-child {
-      margin-bottom: 0;
-    }
-    @include mq(max, 0, 768) {
-      margin-top: 20px;
-    }
-  }
-}
-
-/////////////////////////
-// grid
-/////////////////////////
-/* autoprefixer grid: autoplace */
-.l-grid {
-  display: grid;
-  grid-template:
-    'header header header'
-    '......  ...... ......'
-    'aside  ...... main'
-    '......  ...... ......'
-    'footer footer footer';
-  grid-template-columns: 200px 20px 1fr 20px;
-  grid-template-rows: 50px 10px 1fr 10px 50px;
-  // row-gap: 10px;
-  // column-gap: 20px;
-  // grid-gap: 10px 20px;
-  // area→row/column
-  // grid-template:
-  //   "header header" 50px
-  //   "aside  main" 1fr
-  //   "footer footer" 50px /
-  //   200px 1fr;
-  // display: flex;
-  // align-items: center;
-  @include mq(max, 0, 768) {
-    grid-template:
-      'header header'
-      '......  ......'
-      'aside  aside'
-      '......  ......'
-      'main main'
-      '......  ......'
-      'footer footer';
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 20px 1fr 20px 1fr 20px 50px;
-  }
-  & > *:first-child {
-    grid-area: header;
-    background-color: #ccc;
-  }
-  & > *:nth-child(2) {
-    grid-area: aside;
-    background-color: #ff0000;
-  }
-  & > *:nth-child(3) {
-    grid-area: main;
-    background-color: #0b8111;
-  }
-  & > *:last-child {
-    grid-area: footer;
-    background-color: #ccc;
-  }
 }
