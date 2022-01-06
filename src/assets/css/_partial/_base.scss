@@ -1,3 +1,6 @@
+@use './functions/_variables' as var;
+@use './functions/_mixin' as *;
+
 /*------------------------
   base css
 ------------------------*/
@@ -24,9 +27,9 @@ html {
 }
 
 body {
-  font-family: $font;
+  font-family: var.$font;
   @include font-size(16);
-  color: $main;
+  color: var.$main;
   line-height: 1.5;
 }
 
@@ -36,12 +39,12 @@ a {
   word-break: break-all;
   @include transition();
   cursor: pointer;
-  @include mq(max, 0, $sp_width) {
+  @include mq(max, 0, var.$sp_width) {
     @include font-size(14);
   }
   &:hover {
     opacity: 0.7;
-    @include mq(max, 0, $sp_width) {
+    @include mq(max, 0, var.$sp_width) {
       opacity: 1;
     }
   }
@@ -57,7 +60,7 @@ p {
   @include font-size(16);
   letter-spacing: 0.6px;
   word-break: break-all;
-  @include mq(max, 0, $sp_width) {
+  @include mq(max, 0, var.$sp_width) {
     @include font-size(14);
   }
 }

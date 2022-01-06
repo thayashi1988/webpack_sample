@@ -6,12 +6,9 @@ $content_width: 1140px;
 $sp_width: 768; // ブレイクポイント幅、mixinに影響あり
 
 //フォント
-$font: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
-  Meiryo, sans-serif;
-$hiragino: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
-  'Helvetica Neue', Arial, sans-serif;
-$yugo: 'Yu Gothic', '游ゴシック', 'YuGothic', '游ゴシック体',
-  'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
+$font: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+$hiragino: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, 'Helvetica Neue', Arial, sans-serif;
+$yugo: 'Yu Gothic', '游ゴシック', 'YuGothic', '游ゴシック体', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
 
 //カラー
 $main: #000;
@@ -26,3 +23,8 @@ $img_path: '../img/';
 //ブレイクポイント
 $bp-md: 'screen and (max-width: 1000px)';
 $bp-sp: 'screen and (max-width: 768px)';
+$xl: '1024';
+$lg: '960';
+$md: '768';
+$sm: '540';
+$xs: '320';

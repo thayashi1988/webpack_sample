@@ -1,3 +1,6 @@
+@use './functions/_variables' as var;
+@use './functions/_mixin' as *;
+
 /*
 /////////////////////////
 // section
@@ -13,7 +16,6 @@
     margin-top: 60px;
   }
 }
-
 /*
 /////////////////////////
 // column

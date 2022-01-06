@@ -1,13 +1,15 @@
-@import '_partial/_reset';
-@import '_partial/functions/_mixin';
-@import '_partial/functions/_variables';
-@import '_partial/_base';
+@use '_partial/_reset';
+@use '_partial/functions/_mixin';
+@use '_partial/functions/_variables';
+@use '_partial/_base';
+
 // swiperのcssをインポート
-@import '../../../node_modules/swiper/swiper';
-@import '../../../node_modules/swiper/components/navigation/navigation';
-@import '../../../node_modules/swiper/components/pagination/pagination';
-@import '../../../node_modules/swiper/components/scrollbar/scrollbar';
+@use '../../../node_modules/swiper/swiper';
+@use '../../../node_modules/swiper/components/navigation/navigation';
+@use '../../../node_modules/swiper/components/pagination/pagination';
+@use '../../../node_modules/swiper/components/scrollbar/scrollbar';
+
 // オリジナルスタイル
-@import '_partial/_style';
-@import '_partial/_layout';
-@import '_partial/modules/_heading';
+@use '_partial/_style';
+@use '_partial/_layout';
+@use '_partial/modules/_heading';

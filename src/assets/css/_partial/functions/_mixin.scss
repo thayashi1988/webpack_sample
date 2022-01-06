@@ -1,3 +1,5 @@
+@use './_variables' as var;
+
 ////////////////
 //  mixin
 ////////////////
@@ -11,17 +13,17 @@
 //   margin-bottom: 40px;
 // }
 //mq
-@mixin mq($val, $min, $max) {
-  @if $val == max {
-    @media screen and (max-width: $max + px) {
+@mixin mq($val, $min: var.$sm, $max: var.$lg) {
+  @if $val == 'max' {
+    @media screen and (max-width: ($max + px)) {
       @content;
     }
-  } @else if $val == min {
-    @media screen and (min-width: $max + px) {
+  } @else if $val == 'min' {
+    @media screen and (min-width: ($max + px)) {
       @content;
     }
-  } @else if $val == both {
-    @media screen and (min-width: $min + px) and (max-width: $max + px) {
+  } @else if $val == 'both' {
+    @media screen and (min-width: ($min + px)) and (max-width: ($max + px)) {
       @content;
     }
   }
