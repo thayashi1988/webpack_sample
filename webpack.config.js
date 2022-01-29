@@ -5,6 +5,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const outputPath = path.resolve(__dirname, 'dist');
+const pasthsss = path.join(__dirname, '/dist/assets/js', 'index.js')
+console.log('outputPath:', outputPath);
+console.log('pasthsss:', pasthsss);
 const env = process.env.NODE_ENV;
 
 //plugins
@@ -31,8 +34,8 @@ module.exports = [
     mode: 'development',
     devtool: env === 'development' ? 'eval-source-map' : false,
     entry: {
-      index: './src/assets/js/index.js'
-      // index2: './src/assets/js/index.js'
+      index: '/src/assets/js/index.js'
+      // index2: '/src/assets/js/index.js'
     },
     output: {
       path: outputPath + '/assets/js',
