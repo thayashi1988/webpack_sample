@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use './functions/_variables' as var;
 @use './functions/_mixin' as *;
 
@@ -49,13 +50,13 @@
     margin-top: 40px;
     @for $value from 1 through 12 {
       &[data-col='#{$value}'] {
-        width: (100% / 12 * $value);
+        width: calc(100% / 12 * $value);
       }
     }
     @for $value from 1 through 12 {
       &[data-col-sp='#{$value}'] {
         @include mq(max, 0, 768) {
-          width: (100% / 12 * $value);
+          width: calc(100% / 12 * $value);
         }
       }
     }
